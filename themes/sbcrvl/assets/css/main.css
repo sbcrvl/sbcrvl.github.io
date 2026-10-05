@@ -1,15 +1,83 @@
 @import "components/header.css";
 @import "components/footer.css";
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-dark2: #ded5d0;
+    --color-dark1: #eee5de;
+    --color-background: #f8efe7;
+    --color-text: #2c232e;
+    --color-accent1: #ce4770;
+    --color-accent2: #d4572b;
+    --color-accent3: #b16803;
+    --color-accent4: #218871;
+    --color-accent5: #2473b6;
+    --color-accent6: #6851a2;
+    --color-dimmed1: #72696d;
+    --color-dimmed2: #92898a;
+    --color-dimmed3: #a59c9c;
+    --color-dimmed4: #beb5b3;
+    --color-dimmed5: #d2c9c4;
+    --color-panel: #fdf7f3;
+    --color-light: #fffcfa;
+  
+    --color-panel: var(--color-dimmed5);
+    --color-focus: var(--color-accent1);
+    --color-focus-hover: var(--color-accent6);
+    --color-contrast-panel: var(--color-dark1);
+    --color-contrast-border: var(--color-dark2);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-dark2: #191515;
+    --color-dark1: #211c1c;
+    --color-background: #2c2525;
+    --color-text: #fff1f3;
+    --color-accent1: #fd6883;
+    --color-accent2: #f38d70;
+    --color-accent3: #f9cc6c;
+    --color-accent4: #adda78;
+    --color-accent5: #85dacc;
+    --color-accent6: #a8a9eb;
+    --color-dimmed1: #c3b7b8;
+    --color-dimmed2: #948a8b;
+    --color-dimmed3: #72696a;
+    --color-dimmed4: #5b5353;
+    --color-dimmed5: #403838;
+  
+    --color-panel: var(--color-dimmed5);
+    --color-focus: var(--color-accent3);
+    --color-focus-hover: var(--color-accent4);
+    --color-contrast-panel: var(--color-dark1);
+    --color-contrast-border: var(--color-dark2);
+  }
+}
+
+::selection {
+  background:var(--color-text);
+  color:var(--color-background)
+}
+
 body {
-  color: #222;
+  /* color: #222; */
   font-family: sans-serif;
   line-height: 1.5;
   margin: 1rem;
   max-width: 768px;
+  
+  color: var(--color-text);
+  background-color: var(--color-background);
 }
 
 a {
-  color: #00e;
+  /* color: #00e; */
   text-decoration: none;
+  
+  color: var(--color-focus);
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

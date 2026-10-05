@@ -1,7 +1,19 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://sbcrvl.com/'
 locale = 'en-us'
-title = 'My New Hugo Project'
+title = 'Sebastian Carrera'
 theme = 'sbcrvl'
+
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+
+  [[menus.main]]
+    name = 'Now'
+    pageRef = '/now'
+    weight = 20

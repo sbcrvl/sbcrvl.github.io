@@ -1,4 +1,30 @@
 header {
-  border-bottom: 1px solid #222;
+  /* border-bottom: 1px solid #222; */
   margin-bottom: 1rem;
+  
+  border-bottom: 1px solid var(--color-contrast-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  height: 80px;
+}
+
+header ul {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0px;
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+header a {
+  font-weight: 600;
+  color: var(--color-text);
+
+  &:hover {
+    color: var(--color-focus);
+    text-decoration: none;
+  }
 }
